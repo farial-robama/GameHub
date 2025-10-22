@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../Layouts/HomeLayout";
 import Home from "../Pages/Home/Home";
 import AuthLayout from "../Layouts/AuthLayout";
@@ -7,7 +7,8 @@ import Register from "../Pages/Auth/Register";
 import GameDetails from "../Pages/Games/GameDetails";
 import NotFound from "../Pages/NotFound";
 import PrivateRoute from "./PrivateRoute";
-import Loading from "../Components/Loading";
+import LoadingSpinner from "../Components/LoadingSpinner";
+
 
 const router = createBrowserRouter([
     {
@@ -15,35 +16,36 @@ const router = createBrowserRouter([
         element: <HomeLayout></HomeLayout>,
         children:[
             {
-                path: "",
-                Component: Home,
+                index: true,
+                element: <Home></Home>
             }
         ]
     },
-    {
-        path: "/auth",
-        element: <AuthLayout></AuthLayout>,
-        children:[
-            {
-                path: "/auth/login",
-                element: <Login></Login>
-            },
-            {
-                path: "/auth/register",
-                element: <Register></Register>
-            }
-        ]
-    },
-    {
-        path: "/game-details/:id",
-        element: <PrivateRoute>
-            <GameDetails></GameDetails>
-        </PrivateRoute>,
-        loader: () => fetch("/games.json"),
-        hydrateFallbackElement: <Loading></Loading>
-    },
-    {
-        path: "/*",
-        element: <NotFound></NotFound>
-    }
+    // {
+    //     path: "/auth",
+    //     element: <AuthLayout></AuthLayout>,
+    //     children:[
+    //         {
+    //             path: "login",
+    //             element: <Login></Login>
+    //         },
+    //         {
+    //             path: "register",
+    //             element: <Register></Register>
+    //         }
+    //     ]
+    // },
+    // {
+    //     path: "/game-details/:id",
+    //     element: <PrivateRoute>
+    //         <GameDetails></GameDetails>
+    //     </PrivateRoute>,
+    //     loader: () => fetch("/games.json"),
+    //     hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
+    // },
+    // {
+    //     path: "*",
+    //     element: <NotFound></NotFound>
+    // }
 ])
+export default router;
