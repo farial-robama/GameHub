@@ -9,6 +9,9 @@ import NotFound from "../Pages/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import LoadingSpinner from "../Components/LoadingSpinner";
 import ForgetPassword from "../Pages/Auth/ForgetPassword";
+import MyProfile from "../Pages/Profile/MyProfile";
+import UpdateProfile from "../Pages/Profile/UpdateProfile";
+import Games from "../Pages/Games/Games";
 
 
 const router = createBrowserRouter([
@@ -19,7 +22,43 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home></Home>
-            }
+            },
+            {
+        path: "/games",
+        element: <PrivateRoute>
+            <Games></Games>
+        </PrivateRoute>,
+        loader: () => fetch("/games.json"),
+        hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
+    },
+    {
+        path: "/game-details/:id",
+        element: <PrivateRoute>
+            <GameDetails></GameDetails>
+        </PrivateRoute>,
+        loader: () => fetch("/games.json").then(res => res.json()),
+        hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
+    },
+     {
+        path: "/about",
+        element:""
+
+     },
+            {
+        path: "/my-profile",
+        element: <PrivateRoute>
+            <MyProfile></MyProfile>
+        </PrivateRoute>
+
+    },
+    {
+    
+        path: "/update-profile",
+        element: <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+        </PrivateRoute>
+        
+    }
         ]
     },
     {
@@ -39,22 +78,6 @@ const router = createBrowserRouter([
                 element: <ForgetPassword></ForgetPassword>
             }
         ]
-    },
-    {
-        path: "/games/:id",
-        element: <PrivateRoute>
-            <GameDetails></GameDetails>
-        </PrivateRoute>,
-        loader: () => fetch("/games.json"),
-        hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
-    },
-    {
-        path: "/game-details/:id",
-        element: <PrivateRoute>
-            <GameDetails></GameDetails>
-        </PrivateRoute>,
-        loader: () => fetch("/games.json").then(res => res.json()),
-        hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
     },
     {
         path: "*",

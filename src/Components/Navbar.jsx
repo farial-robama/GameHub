@@ -8,7 +8,7 @@ const Navbar = () => {
     const links =[
         {name: "Home", to: "/"},
         {name: "Games", to: "/games"},
-        {name: "Installation", to: "/installation"}
+        {name: "About", to: "/about"}
     ]
 
     const handleLogout = async () => {
