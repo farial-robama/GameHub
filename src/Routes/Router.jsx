@@ -8,6 +8,7 @@ import GameDetails from "../Pages/Games/GameDetails";
 import NotFound from "../Pages/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import LoadingSpinner from "../Components/LoadingSpinner";
+import ForgetPassword from "../Pages/Auth/ForgetPassword";
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path: "register",
                 element: <Register></Register>
+            },
+            {
+                path: "forget-password",
+                element: <ForgetPassword></ForgetPassword>
             }
         ]
     },

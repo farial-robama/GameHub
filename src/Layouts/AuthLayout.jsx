@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet } from 'react-router';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import { ToastContainer } from 'react-toastify';
 
 const AuthLayout = () => {
     return (
@@ -16,18 +15,7 @@ const AuthLayout = () => {
             <footer>
                 <Footer></Footer>
             </footer>
-            <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick={false}
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
+        
         </div>
     );
 };

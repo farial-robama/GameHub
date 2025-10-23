@@ -1,13 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router';
-import { sendPasswordResetEmail } from 'firebase/auth';
-import { auth } from '../../Firebase/firebase.config';
 import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
-    const {signin} = useContext(AuthContext)
+    const {signIn} = useContext(AuthContext)
         const[email, setEmail] = useState("")
         const[password, setPassword] = useState("")
         const[error, setError] = useState("")
@@ -15,33 +13,22 @@ const Login = () => {
         const navigate = useNavigate()
         const location = useLocation()
 
-        // const from = location.state || "/"
-
         const handleSubmit = async(e) => {
         e.preventDefault();
         setError("");
         try{
-        await signin(email, password);
-        navigate(`${location.state ? location.state : "/"}`)
+        await signIn(email, password);
+        toast.success("Logged in successfully!!")
+        // navigate(`${location.state ? location.state : "/"}`)
+            const from = location.state?.from?.pathname || "/";
+        navigate(from, {replace: true});
     }
     catch(err){
         setError(err.message);
+        toast.error("Invalid credentials or user not found!")
     }
 }
 
-   const handleResetPassword = async(e) => {
-        if (!email) {
-            toast.error("Please enter your email first")
-        }
-        try{
-        await sendPasswordResetEmail(auth,email);
-        toast.success("Password reset email sent! Check your inbox")
-    }
-    catch(err){
-        setError(err.message);
-        toast.error("Something went wrong! Try again");
-    }
-}
     return (   
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
@@ -60,7 +47,8 @@ const Login = () => {
                       </span>
                       </div>
 
-          <div><button onClick={handleResetPassword} className="link link-hover text-red-600">Forgot password?</button></div>
+          <div><Link to="/auth/forget-password" state={{email}} className="link link-hover text-red-600">Forgot password?</Link></div>
+
           <button className="btn btn-neutral mt-4">Login</button>
           <div className='mt-2 text-xs'>
             <p >Don't have an account?

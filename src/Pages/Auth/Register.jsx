@@ -41,17 +41,18 @@ const Register = () => {
             <fieldset className="fieldset">
                 {/* Name */}
           <label className="label">Name</label>
-          <input value={name} onChange={e => setName(e.target.value)} type="text" className="input w-full pr-20" placeholder="Name" required/>
+          <input value={name} onChange={e => setName(e.target.value)} type="text" className="input w-full mr-20" placeholder="Name" required/>
           {/* PhotoURL */}
           <label value={photoURL} className="label">PhotoURL</label>
-          <input onChange={e => setPhotoURL(e.target.value)} type="text" className="input w-full pr-20" placeholder="Photo URL" required />
+          <input onChange={e => setPhotoURL(e.target.value)} type="text" className="input w-full mr-20" placeholder="Photo URL" required />
             {/* Email */}
           <label className="label">Email</label>
-          <input value={email} onChange={e => setEmail(e.target.value)} type="email" className="input w-full pr-20" placeholder="Email" required/>
+          <input value={email} onChange={e => setEmail(e.target.value)} type="email" className="input w-full mr-20" placeholder="Email" required/>
           {/* Password */}
           <label className="label">Password</label>
           <div className='relative'>
-            <input value={password} onChange={e => setPassword(e.target.value)} type={showPassword ? "text" : "password"} className="input w-full pr-20" placeholder="Password" required/>
+            <input value={password} onChange={e => setPassword(e.target.value)} type={showPassword ? "text" : "password"} className="input w-full mr-20" placeholder="Password" required/>
+            
             <span onClick={() => setShowPassword(!showPassword)} className='absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer'>
                 {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
             </span>

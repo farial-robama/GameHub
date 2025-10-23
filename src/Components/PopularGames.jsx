@@ -11,7 +11,7 @@ const PopularGames = () => {
         .then(data => setGames(data))
     },[])
 
-    const popularGames = [...games].sort((a,b) => b.ratings - a.ratings).slice(0,3)
+    const popularGames = [...games].sort((a,b) => b.ratings - a.ratings).slice(0,6)
     return (
         <div>
             <h1></h1>
