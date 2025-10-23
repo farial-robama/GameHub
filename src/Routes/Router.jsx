@@ -21,31 +21,39 @@ const router = createBrowserRouter([
             }
         ]
     },
-    // {
-    //     path: "/auth",
-    //     element: <AuthLayout></AuthLayout>,
-    //     children:[
-    //         {
-    //             path: "login",
-    //             element: <Login></Login>
-    //         },
-    //         {
-    //             path: "register",
-    //             element: <Register></Register>
-    //         }
-    //     ]
-    // },
-    // {
-    //     path: "/game-details/:id",
-    //     element: <PrivateRoute>
-    //         <GameDetails></GameDetails>
-    //     </PrivateRoute>,
-    //     loader: () => fetch("/games.json"),
-    //     hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
-    // },
-    // {
-    //     path: "*",
-    //     element: <NotFound></NotFound>
-    // }
+    {
+        path: "/auth",
+        element: <AuthLayout></AuthLayout>,
+        children:[
+            {
+                path: "login",
+                element: <Login></Login>
+            },
+            {
+                path: "register",
+                element: <Register></Register>
+            }
+        ]
+    },
+    {
+        path: "/games/:id",
+        element: <PrivateRoute>
+            <GameDetails></GameDetails>
+        </PrivateRoute>,
+        loader: () => fetch("/games.json"),
+        hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
+    },
+    {
+        path: "/game-details/:id",
+        element: <PrivateRoute>
+            <GameDetails></GameDetails>
+        </PrivateRoute>,
+        loader: () => fetch("/games.json").then(res => res.json()),
+        hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
+    },
+    {
+        path: "*",
+        element: <NotFound></NotFound>
+    }
 ])
 export default router;

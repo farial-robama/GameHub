@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
+    const {user} = useContext(AuthContext)
+    const links =[
+        {name: "Home", to: "/"},
+        {name: "Games", to: "/games"},
+        {name: "Installation", to: "/installation"}
+    ]
     return (
         <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
@@ -11,23 +19,46 @@ const Navbar = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-        <li><a>Game Details</a></li>
-        <li><a>Installation</a></li>
+        {
+            links.map(link => (
+                <NavLink
+                key={link.to}
+                to={link.to}
+                className={({isActive}) =>
+                isActive ? "bg-linear-to-br from-[#632FE9] to-[#9F62F0] text-white" : ""}>
+                    {link.name}
+                </NavLink>
+            ))
+        }
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">LOTUS GameHub</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-        <li><a>Home</a></li>
-        <li><a>Game Details</a></li>
-        <li><a>Installation</a></li>
+         {
+            links.map(link => (
+                <NavLink
+                key={link.to}
+                to={link.to}
+                className={({isActive}) =>
+                isActive ? "text-[#9F62F0] font-bold px-4" : "px-4 font-semibold"}>
+                    {link.name}
+                </NavLink>
+            ))
+        }
     </ul>
   </div>
   <div className="navbar-end flex gap-3.5">
-    <button class="btn btn-primary">Login</button>
-    <button class="btn btn-secondary">Register</button>
+    {
+        user ? "" 
+        : 
+        <div className='flex gap-3.5'>
+            <Link to="/auth/login" className="btn btn-primary">Login</Link>
+    <Link to="/auth/register" className="btn btn-secondary">Register</Link>
+        </div>
+    }
+    
   </div>
 </div>
     );

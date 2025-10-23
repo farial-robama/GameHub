@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "PlayerUnknown’s Battlegrounds (PUBG)",
-    "coverPhoto": "https://i.ibb.co/QcdGZCn/pubg.jpg",
+    "coverPhoto": "/pubg.png",
     "category": "FPS",
     "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
     "description": "PUBG Mobile is a fast-paced battle royale game where players parachute onto an island and fight for survival using strategy, stealth, and skill.",
@@ -12,7 +12,7 @@
   {
     "id": "2",
     "title": "Valorant",
-    "coverPhoto": "https://i.ibb.co/X2swK4x/valorant.jpg",
+    "coverPhoto": "/valorant.png",
     "category": "FPS",
     "downloadLink": "https://playvalorant.com/",
     "description": "Valorant is a 5v5 tactical shooter from Riot Games that combines precise gunplay and unique agent abilities for intense, strategic gameplay.",
@@ -22,7 +22,7 @@
   {
     "id": "3",
     "title": "Minecraft",
-    "coverPhoto": "https://i.ibb.co/zGqgJmS/minecraft.jpg",
+    "coverPhoto": "/minecraft.png",
     "category": "Sandbox",
     "downloadLink": "https://www.minecraft.net/",
     "description": "Minecraft is a block-building sandbox game where players can explore, craft, and survive in randomly generated worlds full of adventure.",
@@ -32,7 +32,7 @@
   {
     "id": "4",
     "title": "Among Us",
-    "coverPhoto": "https://i.ibb.co/9Hh5GLN/among-us.jpg",
+    "coverPhoto": "/among-us.png",
     "category": "Party",
     "downloadLink": "https://innersloth.com/gameAmongUs.php",
     "description": "Among Us is a fun multiplayer game of teamwork and betrayal where Crewmates work together while Impostors try to sabotage and eliminate them.",
@@ -42,7 +42,7 @@
   {
     "id": "5",
     "title": "Genshin Impact",
-    "coverPhoto": "https://i.ibb.co/6YXZJq7/genshin-impact.jpg",
+    "coverPhoto": "/Genshin-impact.png",
     "category": "RPG",
     "downloadLink": "https://genshin.hoyoverse.com/",
     "description": "Genshin Impact is an open-world action RPG set in the fantasy land of Teyvat, featuring elemental magic, exploration, and epic storytelling.",
@@ -52,7 +52,7 @@
   {
     "id": "6",
     "title": "Apex Legends",
-    "coverPhoto": "https://i.ibb.co/hDY4sxn/apex-legends.jpg",
+    "coverPhoto": "/Apex-Legends.png",
     "category": "Battle Royale",
     "downloadLink": "https://www.ea.com/games/apex-legends",
     "description": "Apex Legends is a free-to-play battle royale hero shooter where players form squads of unique Legends and fight for glory in futuristic arenas.",
@@ -62,7 +62,7 @@
   {
     "id": "7",
     "title": "Call of Duty: Mobile",
-    "coverPhoto": "https://i.ibb.co/tLwr7Zp/cod-mobile.jpg",
+    "coverPhoto": "/Call-of-Duty.png",
     "category": "FPS",
     "downloadLink": "https://www.callofduty.com/mobile",
     "description": "Call of Duty: Mobile brings the iconic FPS franchise to your phone, offering classic maps, modes, and high-speed action gameplay.",
@@ -72,7 +72,7 @@
   {
     "id": "8",
     "title": "The Witcher 3: Wild Hunt",
-    "coverPhoto": "https://i.ibb.co/sKfB5cH/witcher3.jpg",
+    "coverPhoto": "/Witcher.png",
     "category": "RPG",
     "downloadLink": "https://thewitcher.com/en/witcher3",
     "description": "An award-winning RPG where you play as Geralt of Rivia, a monster hunter exploring a vast world filled with story-driven quests and moral choices.",
@@ -82,7 +82,7 @@
   {
     "id": "9",
     "title": "Fortnite",
-    "coverPhoto": "https://i.ibb.co/5cJvQ5G/fortnite.jpg",
+    "coverPhoto": "/Fortnite.png",
     "category": "Battle Royale",
     "downloadLink": "https://www.epicgames.com/fortnite",
     "description": "Fortnite is a vibrant battle royale game that combines shooting, building, and creativity in a constantly evolving world.",
@@ -92,7 +92,7 @@
   {
     "id": "10",
     "title": "League of Legends",
-    "coverPhoto": "https://i.ibb.co/6WwMz3k/leagueoflegends.jpg",
+    "coverPhoto": "/League-of-Legends.png",
     "category": "MOBA",
     "downloadLink": "https://www.leagueoflegends.com/",
     "description": "League of Legends is a team-based strategy game where two teams of five champions face off to destroy each other's base.",
@@ -102,7 +102,7 @@
   {
     "id": "11",
     "title": "Clash of Clans",
-    "coverPhoto": "https://i.ibb.co/F74W63K/clashofclans.jpg",
+    "coverPhoto": "/Clash-of-Clans.png",
     "category": "Strategy",
     "downloadLink": "https://supercell.com/en/games/clashofclans/",
     "description": "Clash of Clans is a mobile strategy game where players build villages, train troops, and attack others to earn gold and trophies.",
@@ -112,7 +112,7 @@
   {
     "id": "12",
     "title": "Rocket League",
-    "coverPhoto": "https://i.ibb.co/zNhdT1W/rocketleague.jpg",
+    "coverPhoto": "/Rocket-League.png",
     "category": "Sports",
     "downloadLink": "https://www.rocketleague.com/",
     "description": "Rocket League combines soccer with rocket-powered cars in high-octane matches that are both skillful and chaotic.",
@@ -122,7 +122,7 @@
   {
     "id": "13",
     "title": "Hollow Knight",
-    "coverPhoto": "https://i.ibb.co/R66LLk2/hollowknight.jpg",
+    "coverPhoto": "/Hollow-Knight.png",
     "category": "Adventure",
     "downloadLink": "https://www.hollowknight.com/",
     "description": "Hollow Knight is a beautifully hand-drawn 2D action-adventure game set in a vast underground world of insects and heroes.",
@@ -132,7 +132,7 @@
   {
     "id": "14",
     "title": "Stardew Valley",
-    "coverPhoto": "https://i.ibb.co/4jKQyKC/stardewvalley.jpg",
+    "coverPhoto": "/Stardew-Valley.png",
     "category": "Simulation",
     "downloadLink": "https://www.stardewvalley.net/",
     "description": "Stardew Valley lets you build the farm of your dreams, raise animals, grow crops, and become part of a charming rural community.",
@@ -142,7 +142,7 @@
   {
     "id": "15",
     "title": "Cyberpunk 2077",
-    "coverPhoto": "https://i.ibb.co/tL9Qf2C/cyberpunk2077.jpg",
+    "coverPhoto": "/Cyberpunk-2077.png",
     "category": "RPG",
     "downloadLink": "https://www.cyberpunk.net/",
     "description": "Cyberpunk 2077 is an open-world RPG set in a dystopian future where you play as V, a mercenary navigating Night City's chaos.",

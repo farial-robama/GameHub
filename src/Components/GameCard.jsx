@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const GameCard = ({game}) => {
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+        <Link to={`/game-details/${game.id}`}>
+        <div className="card bg-base-100 w-full h-100 shadow-sm">
   <figure>
     <img
       src={game.coverPhoto}/>
@@ -18,6 +20,7 @@ const GameCard = ({game}) => {
     </div>
   </div>
 </div>
+        </Link>
     );
 };
 
