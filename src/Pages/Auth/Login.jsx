@@ -4,12 +4,14 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../../Firebase/firebase.config';
 import { toast } from 'react-toastify';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
     const {signin} = useContext(AuthContext)
         const[email, setEmail] = useState("")
         const[password, setPassword] = useState("")
         const[error, setError] = useState("")
+        const[showPassword, setShowPassword] = useState(false)
         const navigate = useNavigate()
         const location = useLocation()
 
@@ -48,9 +50,15 @@ const Login = () => {
                 {/* Email */}
           <label className="label">Email</label>
           <input value={email} onChange={e => setEmail(e.target.value)} type="email" className="input" placeholder="Email" />
+         
           {/* Password */}
-          <label className="label">Password</label>
-          <input value={password} onChange={e => setPassword(e.target.value)} type="password" className="input" placeholder="Password" />
+                    <label className="label">Password</label>
+                    <div className='relative'>
+                      <input value={password} onChange={e => setPassword(e.target.value)} type={showPassword ? "text" : "password"} className="input w-full pr-20" placeholder="Password" required/>
+                      <span onClick={() => setShowPassword(!showPassword)} className='absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer'>
+                          {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                      </span>
+                      </div>
 
           <div><button onClick={handleResetPassword} className="link link-hover text-red-600">Forgot password?</button></div>
           <button className="btn btn-neutral mt-4">Login</button>

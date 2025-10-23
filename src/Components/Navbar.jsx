@@ -1,14 +1,24 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
-    const {user} = useContext(AuthContext)
+    const {user, logOut} = useContext(AuthContext)
     const links =[
         {name: "Home", to: "/"},
         {name: "Games", to: "/games"},
         {name: "Installation", to: "/installation"}
     ]
+
+    const handleLogout = async () => {
+        try {
+            await logOut();
+            toast.success("You logged out successfully!")
+        } catch (err) {
+            console.log("Logout failed:",err);          
+        }
+    }
     return (
         <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
@@ -51,7 +61,14 @@ const Navbar = () => {
   </div>
   <div className="navbar-end flex gap-3.5">
     {
-        user ? "" 
+        user ? 
+        <div className='flex items-center gap-3'>
+            <Link to="/my-profile">
+            <img src={user.photoURL} alt={user.displayName}
+            className='w-10 h-10 rounded-full object-cover cursor-pointer' />
+        </Link> 
+        <button onClick={handleLogout} className="btn btn-error text-white">Logout</button>
+        </div>
         : 
         <div className='flex gap-3.5'>
             <Link to="/auth/login" className="btn btn-primary">Login</Link>
