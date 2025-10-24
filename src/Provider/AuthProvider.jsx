@@ -8,6 +8,7 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../Firebase/firebase.config";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
@@ -49,6 +50,10 @@ const AuthProvider = ({ children }) => {
     setLoading,
     updateUser,
   };
+
+  if (loading) {
+    return <LoadingSpinner></LoadingSpinner>
+  }
   return (
     <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
   );

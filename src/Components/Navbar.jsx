@@ -42,7 +42,10 @@ const Navbar = () => {
         }
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">LOTUS GameHub</a>
+    <div className='flex items-center'>
+        <img className='w-13' src="/gamehub.png" alt="" />
+    <a className="btn btn-ghost text-[#9F62F0] font-bold text-xl">GameHub</a>
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -71,8 +74,8 @@ const Navbar = () => {
         </div>
         : 
         <div className='flex gap-3.5'>
-            <Link to="/auth/login" className="btn btn-primary">Login</Link>
-    <Link to="/auth/register" className="btn btn-secondary">Register</Link>
+            <Link to="/auth/login" className="btn btn-active bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white mt-7">Login</Link>
+    <Link to="/auth/register" className="btn btn-active bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white mt-7">Register</Link>
         </div>
     }
     
