@@ -51,8 +51,9 @@ const handleGoogleLogin = async(e) => {
             toast.error("Google login failed! Please try again.")
         }
     };
+
     return ( 
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="card bg-[#bcd2b9] w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
         <form onSubmit={handleSubmit}>
             <fieldset className="fieldset">
@@ -74,13 +75,13 @@ const handleGoogleLogin = async(e) => {
                 {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
             </span>
           </div>
-          <button className="btn btn-neutral mt-4">Register</button>
+          <button className="btn bg-[#8772a4] text-white mt-4">Register</button>
           <div className='mt-2 text-xs'>
             <div className='mb-4'>
         <GoogleLogin handleGoogleLogin={handleGoogleLogin}></GoogleLogin>
       </div>
             <p >Already have an account?
-            <Link to="/auth/login" className='text-blue-600 link link-hover pl-2'>Login</Link>
+            <Link to="/auth/login" className='text-[#954ef9] text-sm font-bold link link-hover pl-2'>Login</Link>
             </p>
             </div>
         </fieldset>

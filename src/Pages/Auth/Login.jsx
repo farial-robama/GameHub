@@ -3,9 +3,10 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import GoogleLogin from './GoogleLogin';
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext)
+    const {signIn, googleLogin} = useContext(AuthContext)
         const[email, setEmail] = useState("")
         const[password, setPassword] = useState("")
         const[error, setError] = useState("")
@@ -29,8 +30,23 @@ const Login = () => {
     }
 }
 
+const handleGoogleLogin = async(e) => {
+            e.preventDefault();
+            setError("");
+        try{
+            const result = await googleLogin();
+            const loggedUser = result.user;
+            toast.success(`Welcome ${loggedUser.displayName}!!`)
+            navigate("/")
+        }
+        catch(err){
+            setError(err.message);
+            toast.error("Google login failed! Please try again.")
+        }
+    };
+
     return (   
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="card bg-[#bcd2b9] w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
         <form onSubmit={handleSubmit}>
             <fieldset className="fieldset">
@@ -47,12 +63,15 @@ const Login = () => {
                       </span>
                       </div>
 
-          <div><Link to="/auth/forget-password" state={{email}} className="link link-hover text-red-600">Forgot password?</Link></div>
+          <div><Link to="/auth/forget-password" state={{email}} className="link link-hover text-red-400 font-bold">Forgot password?</Link></div>
 
-          <button className="btn btn-neutral mt-4">Login</button>
+          <button className="btn bg-[#8772a4] text-white my-3">Login</button>
+          <div className='mb-4'>
+            <GoogleLogin handleGoogleLogin={handleGoogleLogin}></GoogleLogin>
+          </div>
           <div className='mt-2 text-xs'>
             <p >Don't have an account?
-            <Link to="/auth/register" className='text-blue-600 link link-hover pl-2'>Register</Link>
+            <Link to="/auth/register" className='text-[#954ef9] text-sm font-bold link link-hover pl-2'>Register</Link>
             </p>
             </div>
         </fieldset>
