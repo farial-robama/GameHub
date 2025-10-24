@@ -37,7 +37,7 @@ const PopularGames = () => {
             </div>
 
 
-          <button onClick={() => navigate("/games")} className="btn btn-active bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white mt-7 px-5">See all</button>
+          <button onClick={() => navigate("/games")} className="btn btn-active bg-linear-to-br from-[#7A85C1] to-[#9F62F2] text-white mt-7 px-5">See All Games</button>
             
         </div>
     );

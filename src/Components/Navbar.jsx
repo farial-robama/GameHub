@@ -20,8 +20,8 @@ const Navbar = () => {
         }
     }
     return (
-        <div className="navbar bg-base-100 shadow-sm">
-  <div className="navbar-start">
+        <div className="navbar bg-[#F7F7F7] shadow-sm h-16">
+        <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
@@ -35,7 +35,7 @@ const Navbar = () => {
                 key={link.to}
                 to={link.to}
                 className={({isActive}) =>
-                isActive ? "bg-linear-to-br from-[#632FE9] to-[#9F62F0] text-white" : ""}>
+                isActive ? "bg-linear-to-br from-[#7A85C1] to-[#9F62F0] text-white" : ""}>
                     {link.name}
                 </NavLink>
             ))
@@ -44,7 +44,7 @@ const Navbar = () => {
     </div>
     <div className='flex items-center'>
         <img className='w-13' src="/gamehub.png" alt="" />
-    <a className="btn btn-ghost text-[#9F62F0] font-bold text-xl">GameHub</a>
+    <a className="btn btn-ghost text-[#7A85C1] font-bold text-xl">GameHub</a>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -55,7 +55,7 @@ const Navbar = () => {
                 key={link.to}
                 to={link.to}
                 className={({isActive}) =>
-                isActive ? "text-[#9F62F0] font-bold px-4" : "px-4 font-semibold"}>
+                isActive ? "text-[#7A85C1] font-bold px-4" : "px-4 font-semibold"}>
                     {link.name}
                 </NavLink>
             ))
@@ -70,17 +70,18 @@ const Navbar = () => {
             <img src={user.photoURL} alt={user.displayName}
             className='w-10 h-10 rounded-full object-cover cursor-pointer' />
         </Link> 
-        <button onClick={handleLogout} className="btn btn-error text-white">Logout</button>
+        <button onClick={handleLogout} className="btn bg-[#7A85C1] text-white">Logout</button>
         </div>
         : 
         <div className='flex gap-3.5'>
-            <Link to="/auth/login" className="btn btn-active bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white mt-7">Login</Link>
-    <Link to="/auth/register" className="btn btn-active bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white mt-7">Register</Link>
+            <Link to="/auth/login" className="btn btn-active bg-linear-to-br from-[#7A85C1] to-[#9F62F2] text-white">Login</Link>
+    <Link to="/auth/register" className="btn btn-active bg-linear-to-br from-[#7A85C1] to-[#9F62F2] text-white">Register</Link>
         </div>
     }
     
   </div>
-</div>
+       </div>
+
     );
 };
 

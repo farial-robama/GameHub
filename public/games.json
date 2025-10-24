@@ -1,11 +1,11 @@
 [
   {
     "id": "1",
-    "title": "PlayerUnknown’s Battlegrounds (PUBG)",
+    "title": "PUBG",
     "coverPhoto": "/pubg.png",
     "category": "FPS",
     "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
-    "description": "PUBG Mobile is a fast-paced battle royale game where players parachute onto an island and fight for survival using strategy, stealth, and skill.",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players parachute onto an island and fight to be the last person standing. Players scavenge for weapons, armor, and supplies while navigating a shrinking play zone. The game combines strategy, stealth, and skillful shooting, creating intense and unpredictable encounters. With solo, duo, and squad modes, every match feels unique and challenging.",
     "ratings": "4.5",
     "developer": "Krafton"
   },
@@ -15,7 +15,7 @@
     "coverPhoto": "/valorant.png",
     "category": "FPS",
     "downloadLink": "https://playvalorant.com/",
-    "description": "Valorant is a 5v5 tactical shooter from Riot Games that combines precise gunplay and unique agent abilities for intense, strategic gameplay.",
+    "description": "Valorant is a 5v5 tactical shooter from Riot Games that blends precise gunplay with unique agent abilities. Each agent has distinct skills that can turn the tide of a match, emphasizing teamwork and strategy. Matches require communication, timing, and sharp reflexes to outplay opponents. The competitive scene and regular updates keep the gameplay fresh and highly engaging for both casual and professional players.",
     "ratings": "4.7",
     "developer": "Riot Games"
   },
@@ -25,7 +25,7 @@
     "coverPhoto": "/minecraft.png",
     "category": "Sandbox",
     "downloadLink": "https://www.minecraft.net/",
-    "description": "Minecraft is a block-building sandbox game where players can explore, craft, and survive in randomly generated worlds full of adventure.",
+    "description": "Minecraft is a block-building sandbox game where players can explore, craft, and survive in procedurally generated worlds. Players gather resources, build structures, and interact with a variety of creatures and environments. Creative mode allows for unlimited building, while survival mode challenges players to manage health and hunger. Its open-ended gameplay fosters imagination, collaboration, and endless exploration in a pixelated universe.",
     "ratings": "4.8",
     "developer": "Mojang Studios"
   },
@@ -35,7 +35,7 @@
     "coverPhoto": "/among-us.png",
     "category": "Party",
     "downloadLink": "https://innersloth.com/gameAmongUs.php",
-    "description": "Among Us is a fun multiplayer game of teamwork and betrayal where Crewmates work together while Impostors try to sabotage and eliminate them.",
+    "description": "Among Us is a multiplayer party game centered around teamwork and deception. Crewmates work together to complete tasks aboard a spaceship, while Impostors attempt to sabotage and eliminate them. Players must discuss, deduce, and vote carefully to uncover the impostors before it’s too late. Its simple mechanics and social deduction gameplay make it fun and suspenseful for players of all ages, both online and locally.",
     "ratings": "4.4",
     "developer": "Innersloth"
   },
@@ -45,7 +45,7 @@
     "coverPhoto": "/Genshin-impact.png",
     "category": "RPG",
     "downloadLink": "https://genshin.hoyoverse.com/",
-    "description": "Genshin Impact is an open-world action RPG set in the fantasy land of Teyvat, featuring elemental magic, exploration, and epic storytelling.",
+    "description": "Genshin Impact is an open-world action RPG set in the vibrant land of Teyvat, where players explore diverse regions and face elemental challenges. Players can collect and upgrade a variety of characters, each with unique abilities and combat styles. The game combines exploration, puzzle-solving, and dynamic combat with a deep narrative. Stunning visuals, seasonal events, and regular updates enrich the immersive experience.",
     "ratings": "4.6",
     "developer": "HoYoverse"
   },
@@ -55,7 +55,7 @@
     "coverPhoto": "/Apex-Legends.png",
     "category": "Battle Royale",
     "downloadLink": "https://www.ea.com/games/apex-legends",
-    "description": "Apex Legends is a free-to-play battle royale hero shooter where players form squads of unique Legends and fight for glory in futuristic arenas.",
+    "description": "Apex Legends is a free-to-play battle royale game where squads of unique characters, called Legends, compete for survival. Each Legend has distinct abilities and playstyles, making teamwork and strategy essential. The game features fast-paced gunfights, dynamic maps, and a ping system for seamless communication. Regular seasonal updates introduce new Legends, weapons, and challenges, keeping gameplay fresh and engaging.",
     "ratings": "4.7",
     "developer": "Respawn Entertainment"
   },
@@ -65,7 +65,7 @@
     "coverPhoto": "/Call-of-Duty.png",
     "category": "FPS",
     "downloadLink": "https://www.callofduty.com/mobile",
-    "description": "Call of Duty: Mobile brings the iconic FPS franchise to your phone, offering classic maps, modes, and high-speed action gameplay.",
+    "description": "Call of Duty: Mobile brings the classic FPS experience to mobile devices, featuring iconic maps and modes from the franchise. Players can engage in multiplayer battles, battle royale matches, and seasonal events. The game combines precise controls, a wide arsenal of weapons, and customizable loadouts for tactical gameplay. Its high-speed action and competitive ranking system make it a favorite among mobile FPS enthusiasts.",
     "ratings": "4.6",
     "developer": "Activision"
   },
@@ -75,7 +75,7 @@
     "coverPhoto": "/Witcher.png",
     "category": "RPG",
     "downloadLink": "https://thewitcher.com/en/witcher3",
-    "description": "An award-winning RPG where you play as Geralt of Rivia, a monster hunter exploring a vast world filled with story-driven quests and moral choices.",
+    "description": "The Witcher 3: Wild Hunt is an award-winning open-world RPG where players take on the role of Geralt of Rivia, a skilled monster hunter. The game features a vast, richly detailed world filled with story-driven quests, moral choices, and engaging characters. Players can explore towns, forests, and mountains, crafting potions, weapons, and gear. Its deep narrative, stunning visuals, and immersive gameplay set a benchmark for modern RPGs.",
     "ratings": "4.9",
     "developer": "CD Projekt Red"
   },
@@ -85,7 +85,7 @@
     "coverPhoto": "/Fortnite.png",
     "category": "Battle Royale",
     "downloadLink": "https://www.epicgames.com/fortnite",
-    "description": "Fortnite is a vibrant battle royale game that combines shooting, building, and creativity in a constantly evolving world.",
+    "description": "Fortnite is a colorful and dynamic battle royale game that combines shooting, building, and creative gameplay. Players can construct structures, set traps, and outsmart opponents in fast-paced matches. Frequent events, skins, and collaborations make the game highly engaging and culturally relevant. With both competitive and casual modes, Fortnite appeals to a broad audience, encouraging strategy, reflexes, and creativity.",
     "ratings": "4.4",
     "developer": "Epic Games"
   },
@@ -95,7 +95,7 @@
     "coverPhoto": "/League-of-Legends.png",
     "category": "MOBA",
     "downloadLink": "https://www.leagueoflegends.com/",
-    "description": "League of Legends is a team-based strategy game where two teams of five champions face off to destroy each other's base.",
+    "description": "League of Legends is a strategic team-based game where two teams of five champions compete to destroy each other's Nexus. Each champion has unique abilities, strengths, and weaknesses, requiring coordination and tactical planning. Matches involve objectives, map control, and dynamic combat, emphasizing both individual skill and teamwork. With a thriving esports scene and constant updates, LoL remains a cornerstone of competitive gaming.",
     "ratings": "4.7",
     "developer": "Riot Games"
   },
@@ -105,7 +105,7 @@
     "coverPhoto": "/Clash-of-Clans.png",
     "category": "Strategy",
     "downloadLink": "https://supercell.com/en/games/clashofclans/",
-    "description": "Clash of Clans is a mobile strategy game where players build villages, train troops, and attack others to earn gold and trophies.",
+    "description": "Clash of Clans is a mobile strategy game where players build and upgrade their villages, train armies, and raid others for resources. Players must plan attacks, defend their villages, and join clans for cooperative play. The game blends base-building strategy with tactical combat, requiring both planning and quick decision-making. Regular events, wars, and updates keep the community active and competitive.",
     "ratings": "4.6",
     "developer": "Supercell"
   },
@@ -115,7 +115,7 @@
     "coverPhoto": "/Rocket-League.png",
     "category": "Sports",
     "downloadLink": "https://www.rocketleague.com/",
-    "description": "Rocket League combines soccer with rocket-powered cars in high-octane matches that are both skillful and chaotic.",
+    "description": "Rocket League is a high-octane game that combines soccer with rocket-powered cars. Players perform aerial stunts, speed boosts, and strategic maneuvers to score goals against opponents. The game emphasizes teamwork, skill, and precise control, with both casual and competitive modes. Regular updates, tournaments, and a strong esports presence make Rocket League an exciting and fast-paced sports experience.",
     "ratings": "4.8",
     "developer": "Psyonix"
   },
@@ -125,7 +125,7 @@
     "coverPhoto": "/Hollow-Knight.png",
     "category": "Adventure",
     "downloadLink": "https://www.hollowknight.com/",
-    "description": "Hollow Knight is a beautifully hand-drawn 2D action-adventure game set in a vast underground world of insects and heroes.",
+    "description": "Hollow Knight is a beautifully hand-drawn 2D action-adventure game set in a vast underground world. Players explore interconnected areas, battle challenging enemies, and discover hidden secrets. The game features tight combat mechanics, fluid movement, and a hauntingly atmospheric soundtrack. Its rich lore, challenging bosses, and exploration-driven gameplay offer a deeply rewarding experience for fans of Metroidvania games.",
     "ratings": "4.9",
     "developer": "Team Cherry"
   },
@@ -135,7 +135,7 @@
     "coverPhoto": "/Stardew-Valley.png",
     "category": "Simulation",
     "downloadLink": "https://www.stardewvalley.net/",
-    "description": "Stardew Valley lets you build the farm of your dreams, raise animals, grow crops, and become part of a charming rural community.",
+    "description": "Stardew Valley is a charming farming simulation game where players cultivate crops, raise animals, and build relationships with villagers. Beyond farming, players can explore caves, fish, craft items, and participate in seasonal events. The game offers a relaxing and immersive experience with open-ended gameplay and personal progression. Its pixel art style and soothing soundtrack make it a beloved title for casual and dedicated players alike.",
     "ratings": "4.8",
     "developer": "ConcernedApe"
   },
@@ -145,7 +145,7 @@
     "coverPhoto": "/Cyberpunk-2077.png",
     "category": "RPG",
     "downloadLink": "https://www.cyberpunk.net/",
-    "description": "Cyberpunk 2077 is an open-world RPG set in a dystopian future where you play as V, a mercenary navigating Night City's chaos.",
+    "description": "Cyberpunk 2077 is an open-world RPG set in a dystopian future city called Night City. Players assume the role of V, a customizable mercenary navigating a world full of crime, corruption, and high-tech intrigue. The game features branching storylines, immersive combat, hacking mechanics, and deep character customization. Its vast urban environment, cinematic storytelling, and futuristic aesthetics create a highly detailed and engaging RPG experience.",
     "ratings": "4.3",
     "developer": "CD Projekt Red"
   }

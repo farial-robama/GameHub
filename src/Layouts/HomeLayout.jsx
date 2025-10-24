@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify';
 const HomeLayout = () => {
     
     return (
-        <div className='flex flex-col min-h-screen bg-gray-200'>
+        <div className='flex flex-col min-h-screen bg-[#E7F2EF]'>
             <nav>
                 <Navbar></Navbar>
             </nav>

@@ -3,9 +3,10 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
+import GoogleLogin from './GoogleLogin';
 
 const Register = () => {
-    const {createUser, updateUser} = useContext(AuthContext)
+    const {createUser, updateUser, googleLogin} = useContext(AuthContext)
     const [name, setName] = useState("")
     const[email, setEmail] = useState("")
     const[password, setPassword] = useState("")
@@ -34,6 +35,22 @@ const Register = () => {
         toast.error("Failed to register! Please try again.")
     }
 };
+
+const handleGoogleLogin = async(e) => {
+            e.preventDefault();
+            setError("");
+        try{
+            const result = await googleLogin();
+            const loggedUser = result.user;
+            await updateUser({displayName: name, photoURL});
+            toast.success("Welcome!!")
+            navigate("/")
+        }
+        catch(err){
+            setError(err.message);
+            toast.error("Google login failed! Please try again.")
+        }
+    };
     return ( 
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
@@ -52,13 +69,16 @@ const Register = () => {
           <label className="label">Password</label>
           <div className='relative'>
             <input value={password} onChange={e => setPassword(e.target.value)} type={showPassword ? "text" : "password"} className="input w-full mr-20" placeholder="Password" required/>
-            
+
             <span onClick={() => setShowPassword(!showPassword)} className='absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer'>
                 {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
             </span>
           </div>
           <button className="btn btn-neutral mt-4">Register</button>
           <div className='mt-2 text-xs'>
+            <div className='mb-4'>
+        <GoogleLogin handleGoogleLogin={handleGoogleLogin}></GoogleLogin>
+      </div>
             <p >Already have an account?
             <Link to="/auth/login" className='text-blue-600 link link-hover pl-2'>Login</Link>
             </p>
@@ -66,6 +86,7 @@ const Register = () => {
         </fieldset>
         </form>
       </div>
+      
     </div>
     );
 };

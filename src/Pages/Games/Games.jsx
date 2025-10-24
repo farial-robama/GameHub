@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 import GameCard from "../../Components/GameCard";
 
 const Games = () => {
@@ -34,8 +33,8 @@ const Games = () => {
   return (
     <div className="text-center py-10 px-6">
       <h1 className="font-bold text-2xl">All Games</h1>
-      <p className="text-sm text-[#627382] mt-2 mb-6">
-        Explore all popular games on market developed by us.
+      <p className="text-sm text-[#627382] mt-2 mb-10">
+        Explore all games on market developed by us.
       </p>
 
       {/* search+sort */}
@@ -77,7 +76,7 @@ const Games = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+            className="dropdown-content menu bg-base-100 rounded-box z-1 w-40 p-1 shadow-sm"
           >
             <li>
               <button onClick={() => setSort("high")}>High-Low</button>
@@ -91,7 +90,7 @@ const Games = () => {
       )}
       
 
-      {/* gamecard */}
+      {/* gamecards */}
 
       <div className="grid grid-cols-3 gap-4">
         {sortedGames.length > 0 ? (

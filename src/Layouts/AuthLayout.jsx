@@ -5,7 +5,7 @@ import Footer from '../Components/Footer';
 
 const AuthLayout = () => {
     return (
-         <div className='flex flex-col bg-gray-200'>
+         <div className='flex flex-col bg-[#E7F2EF]'>
             <nav>
                 <Navbar></Navbar>
             </nav>
