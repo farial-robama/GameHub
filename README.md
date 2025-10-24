@@ -1,16 +1,51 @@
-# React + Vite
+# Lotus Gamehub - A Game Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Lotus Gamehub** is an engaging online game library that allows users to discover, explore and support indie game developers. Users can browse through a variety of games, view details information, install or play games they like, and manage their profiles securely.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://lotus-gamehub.web.app
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**User Authentication (Firebase)** </br>
+- Email/Password registration & login </br>
+- Google login </br>
+- Password reset option </br>
+- Secure logout functionality
 
-## Expanding the ESLint configuration
+**Projected Routes** </br>
+- Only logged-in users can access game details and certain pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Game Library** </br>
+- Browse games from `games.json` </br>
+- Dynamic search bar </br>
+- Sorting option (by rating) </br>
+- View detailed game information
+
+**User Profile** </br>
+- Update display name & photo URL </br>
+- View user details by clicking on the user image in the navbar
+
+**Responsive Design** </br>
+- Fully mobile and tablet friendly
+
+**UI Enhancements** </br>
+- Animated banner (Framer Motion & Daisy UI Carousel) </br>
+- Toast notification for login/logout </br>
+- Loading spinners and error handling
+
+**Routing & Navigation** </br>
+- Dynamic routes using React Router </br>
+- 404 Not Found page </br>
+- Navbar & footer across all pages
+
+## Technologies Used 
+**Frontend** - React.js, Vite, JavaScript(ES6+), Tailwind CSS, DaisyUI </br>
+**Routing** - React Router </br>
+**Animation** - Framer Motion </br>
+**Authentication** - Firebase Auth </br>
+**Notificatons** - React Toastify </br>
+**Deployment** - Firebase Hosting
+
+
