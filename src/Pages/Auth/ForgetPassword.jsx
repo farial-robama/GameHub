@@ -35,14 +35,14 @@ const ForgetPassword = () => {
 
         
     return (
-            <div className="card bg-[#bcd2b9] w-full max-w-sm shrink-0 shadow-2xl">
+            <div className="card bg-[#bacbb7] w-full max-w-sm shrink-0 shadow-2xl">
                   <div className="card-body">
                     <form onSubmit={handleResetPassword}>
                         <fieldset className="fieldset">
                             {/* Email */}
                       <label className="label">Email</label>
                       <input value={email} onChange={e => setEmail(e.target.value)} type="email" className="input mr-10" placeholder="Email" required/>
-                      <button className="btn bg-[#8772a4] text-white my-3">Reset Password</button>
+                      <button className="btn bg-linear-to-br from-[#6b76b6] to-[#b484f8] text-white my-3">Reset Password</button>
                       </fieldset>
                      </form>
                      <p className='text-xs' >Remember the password?

@@ -20,7 +20,7 @@ const Navbar = () => {
     }
   };
   return (
-    <div className="navbar bg-[#F7F7F7] shadow-sm h-16">
+    <div className="navbar bg-[#F7F7F7] shadow-sm h-auto md:h-16">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,7 +60,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center">
-          <img className="w-13" src="/gamehub.png" alt="" />
+          <img className="w-13 hidden md:block" src="/gamehub.png" alt="" />
           <a className="btn btn-ghost text-[#7A85C1] font-bold text-xl">
             GameHub
           </a>
@@ -96,22 +96,22 @@ const Navbar = () => {
             </Link>
             <button
               onClick={handleLogout}
-              className="btn bg-[#7A85C1] text-white"
+              className="btn btn-active bg-linear-to-br from-[#8c97d7] to-[#b484f8] text-white"
             >
               Logout
             </button>
           </div>
         ) : (
-          <div className="flex gap-3.5">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-3.5">
             <Link
               to="/auth/login"
-              className="btn btn-active bg-linear-to-br from-[#7A85C1] to-[#9F62F2] text-white"
+              className="btn btn-active bg-linear-to-br from-[#8c97d7] to-[#b484f8] text-white"
             >
               Login
             </Link>
             <Link
               to="/auth/register"
-              className="btn btn-active bg-linear-to-br from-[#7A85C1] to-[#9F62F2] text-white"
+              className="btn btn-active bg-linear-to-br from-[#8c97d7] to-[#b484f8] text-white"
             >
               Register
             </Link>

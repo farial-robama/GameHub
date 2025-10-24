@@ -21,7 +21,7 @@ const PopularGames = () => {
         <div className='text-center py-10 px-6'>
             <h1 className='font-bold text-2xl'>Popular Games</h1>
             <p className='text-sm text-[#627382] mt-2 mb-6'>Explore all popular games on market developed by us.</p>
-             <div className='grid grid-cols-3 gap-4'>
+             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
             {
                 popularGames.map((game,i) => (
                     <motion.div 

@@ -12,7 +12,7 @@ const GameDetails = () => {
     }
     return (
         <div className="hero bg-[#F7F7F7] min-h-screen rounded-2xl px-6">
-  <div className="hero-content flex-col lg: text-center w-2xl">
+  <div className="hero-content flex-col lg: text-center w-full md:w-2xl">
     <img className='h-72'
       src={game.coverPhoto}
     />
@@ -21,7 +21,7 @@ const GameDetails = () => {
       <p className="text-gray-500 py-6">
         {game.description}
       </p>
-      <div className='flex items-center justify-center gap-15 mb-5'>
+      <div className='flex md:flex-row flex-col items-center justify-center gap-15 mb-5'>
         <div className='flex flex-col items-center gap-2'>
             <h3 className='text-2xl font-semibold'>Ratings</h3>
             <p className='flex items-center gap-2'><img className='w-7' src="https://img.icons8.com/?size=100&id=qdQpy48X3Rjv&format=png&color=000000" alt="" /><span>{game.ratings}</span></p>

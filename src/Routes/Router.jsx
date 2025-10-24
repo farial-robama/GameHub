@@ -12,6 +12,7 @@ import ForgetPassword from "../Pages/Auth/ForgetPassword";
 import MyProfile from "../Pages/Profile/MyProfile";
 import UpdateProfile from "../Pages/Profile/UpdateProfile";
 import Games from "../Pages/Games/Games";
+import About from "../Pages/About/About";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: "",
+        element: <About></About>,
       },
       {
         path: "/my-profile",

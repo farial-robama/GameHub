@@ -46,7 +46,7 @@ const handleGoogleLogin = async(e) => {
     };
 
     return (   
-    <div className="card bg-[#bcd2b9] w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="card bg-[#bacbb7] w-full max-w-sm shrink-0 shadow-2xl my-9">
       <div className="card-body">
         <form onSubmit={handleSubmit}>
             <fieldset className="fieldset">
@@ -65,7 +65,7 @@ const handleGoogleLogin = async(e) => {
 
           <div><Link to="/auth/forget-password" state={{email}} className="link link-hover text-red-400 font-bold">Forgot password?</Link></div>
 
-          <button className="btn bg-[#8772a4] text-white my-3">Login</button>
+          <button className="btn bg-linear-to-br from-[#7d89ca] to-[#b484f8] text-white my-3">Login</button>
           <div className='mb-4'>
             <GoogleLogin handleGoogleLogin={handleGoogleLogin}></GoogleLogin>
           </div>

@@ -31,15 +31,15 @@ const Games = () => {
   const noGames = !loading && sortedGames.length === 0;
 
   return (
-    <div className="text-center py-10 px-6">
+    <div className="text-center py-10 px-4 md:px-6">
       <h1 className="font-bold text-2xl">All Games</h1>
       <p className="text-sm text-[#627382] mt-2 mb-10">
-        Explore all games on market developed by us.
+        Explore all games on market developed by us. We code for millions.
       </p>
 
       {/* search+sort */}
       {!loading && !noGames &&(
-        <div className="mb-5 flex justify-between items-center">
+        <div className="mb-5 flex flex-col md:flex-row justify-between gap-3 items-center">
         <label className="input">
           <svg
             className="h-[1em] opacity-50"
@@ -92,7 +92,7 @@ const Games = () => {
 
       {/* gamecards */}
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {sortedGames.length > 0 ? (
           sortedGames.map((game, i) => (
             <motion.div
@@ -106,7 +106,7 @@ const Games = () => {
             </motion.div>
           ))
         ) : (
-          <p className="text-xm text-center mt-7 text-gray-500">
+          <p className="text-xl text-center mt-7 text-gray-600">
             No games found
           </p>
         )}
