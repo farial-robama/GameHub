@@ -33,14 +33,15 @@ const Games = () => {
   return (
     <div className="text-center py-10 px-4 md:px-6">
       <h1 className="font-bold text-2xl">All Games</h1>
-      <p className="text-sm text-[#627382] mt-2 mb-10">
+      <p className="text-sm text-[#627382] mt-2 mb-17">
         Explore all games on market developed by us. We code for millions.
       </p>
 
       {/* search+sort */}
-      {!loading && !noGames &&(
-        <div className="mb-5 flex flex-col md:flex-row justify-between gap-3 items-center">
-        <label className="input">
+      {!loading && (
+        <div className="mb-5 flex flex-col md:flex-row justify-between gap-4 items-center  w-full">
+        {/* search */}
+        <label className="input w-full md:w-[60%] max-w-sm">
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +67,8 @@ const Games = () => {
           />
         </label>
 
-        <div
+        {/* sort */}
+       <div
           onChange={(e) => setSort(e.target.value)}
           value={sort}
           className="dropdown dropdown-start"
@@ -106,9 +108,9 @@ const Games = () => {
             </motion.div>
           ))
         ) : (
-          <p className="text-xl text-center mt-7 text-gray-600">
-            No games found
-          </p>
+          <div className="flex justify-center items-center col-span-full h-[30vh]">
+            <p className="text-xl text-gray-500">No games found.</p>
+          </div>
         )}
       </div>
     </div>

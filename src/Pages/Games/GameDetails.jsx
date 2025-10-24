@@ -8,7 +8,7 @@ const GameDetails = () => {
     const game = games.find(g => g.id === id);
 
     if (!game) {
-        return <p className='text-center text-gray-300 mt-10'>Game Not Found</p>
+        return <p className='text-center text-xl text-gray-500 mt-10'>Game Not Found.</p>
     }
     return (
         <div className="hero bg-[#F7F7F7] min-h-screen rounded-2xl px-6">
