@@ -90,7 +90,9 @@ const Navbar = () => {
               <img
                 src={user.photoURL || "/default-profile.png"}
                 alt={user.displayName || "User"}
-                onError={(e) => {e.target.src="/default-profile.png"}}
+                onError={(e) => {
+                  e.target.src = "/default-profile.png";
+                }}
                 className="w-10 h-10 rounded-full object-cover cursor-pointer"
               />
             </Link>

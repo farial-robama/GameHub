@@ -65,8 +65,8 @@ const router = createBrowserRouter([
       },
       {
         path: "*",
-        element: <NotFound></NotFound>
-    }
+        element: <NotFound></NotFound>,
+      },
     ],
   },
   {

@@ -1,19 +1,12 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import GameCard from "../../Components/GameCard";
+import { useLoaderData } from "react-router";
 
 const Games = () => {
-  const [games, setGames] = useState([]);
+  const games = useLoaderData();
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("default");
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    fetch("/games.json")
-      .then((res) => res.json())
-      .then((data) => setGames(data));
-      setLoading(false)
-  }, []);
 
   const filteredGames = games.filter((game) =>
     game.title.toLowerCase().includes(search.toLowerCase())
@@ -28,7 +21,7 @@ const Games = () => {
     }
   });
 
-  const noGames = !loading && sortedGames.length === 0;
+  const noGames = sortedGames.length === 0;
 
   return (
     <div className="text-center py-10 px-4 md:px-6">
@@ -38,8 +31,8 @@ const Games = () => {
       </p>
 
       {/* search+sort */}
-      {!loading && (
-        <div className="mb-5 flex flex-col md:flex-row justify-between gap-4 items-center  w-full">
+
+      <div className="mb-5 flex flex-col md:flex-row justify-between gap-4 items-center  w-full">
         {/* search */}
         <label className="input w-full md:w-[60%] max-w-sm">
           <svg
@@ -68,11 +61,7 @@ const Games = () => {
         </label>
 
         {/* sort */}
-       <div
-          onChange={(e) => setSort(e.target.value)}
-          value={sort}
-          className="dropdown dropdown-start"
-        >
+        <div className="dropdown dropdown-start">
           <div tabIndex={0} role="button" className="btn m-1">
             Sort by ⬇️
           </div>
@@ -89,13 +78,11 @@ const Games = () => {
           </ul>
         </div>
       </div>
-      )}
-      
 
       {/* gamecards */}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {sortedGames.length > 0 ? (
+        {noGames ? (
           sortedGames.map((game, i) => (
             <motion.div
               key={game.id}

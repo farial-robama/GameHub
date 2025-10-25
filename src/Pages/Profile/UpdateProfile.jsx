@@ -53,8 +53,14 @@ const UpdateProfile = () => {
             >
               Update Information
             </button>
-            <p className="mt-3" >Don't want to update?
-            <Link to="/my-profile" className='text-[#954ef9] text-sm font-bold link link-hover pl-2'>My Profile</Link>
+            <p className="mt-3">
+              Don't want to update?
+              <Link
+                to="/my-profile"
+                className="text-[#954ef9] text-sm font-bold link link-hover pl-2"
+              >
+                My Profile
+              </Link>
             </p>
           </fieldset>
         </form>
