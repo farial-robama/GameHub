@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import LoadingSpinner from "./LoadingSpinner";
 
 const slides = [
   {
@@ -19,6 +20,26 @@ const slides = [
 ];
 
 const Banner = () => {
+  const [loaded,setLoaded] = useState(false)
+
+  useEffect(() => {
+    let loadedCount = 0
+    slides.forEach(slide => {
+    const img = new Image ();
+    img.src = slide.img;
+    img.onload =() => {
+      loadedCount++;
+      if (loadedCount === slides.length) {
+        setLoaded(true)
+      }
+    }
+  })
+  },[])
+   if (!loaded) {
+    return <LoadingSpinner></LoadingSpinner>
+   }
+
+   
   return (
     <div>
       <div className="carousel w-full h-110 rounded-3xl">
