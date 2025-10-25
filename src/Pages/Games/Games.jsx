@@ -64,7 +64,7 @@ const Games = () => {
         {/* sort */}
         <div className="dropdown dropdown-start">
           <div tabIndex={0} role="button" className="btn m-1">
-            Sort by ⬇️
+            Sort by ratings ⬇️
           </div>
           <ul
             tabIndex="-1"
