@@ -15,7 +15,7 @@ const slides = [
   {
     img: "/Clash-of-Clans.png",
     title: "Win & Earn",
-    desc: "Play, wind and earn achievements as you rise to the top of the leaderboard!.",
+    desc: "Play, win and earn achievements as you rise to the top of the leaderboard!",
   },
 ];
 
@@ -39,7 +39,7 @@ const Banner = () => {
     return <LoadingSpinner></LoadingSpinner>
    }
 
-   
+
   return (
     <div>
       <div className="carousel w-full h-110 rounded-3xl">
