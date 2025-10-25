@@ -14,14 +14,14 @@ https://lotus-gamehub.web.app
 - Password reset option </br>
 - Secure logout functionality
 
-**Projected Routes** </br>
+**Protected Routes** </br>
 - Only logged-in users can access game details and certain pages
 
 **Game Library** </br>
 - Browse games from `games.json` </br>
 - Dynamic search bar </br>
 - Sorting option (by rating) </br>
-- View detailed game information
+- View details game information
 
 **User Profile** </br>
 - Update display name & photo URL </br>
@@ -45,7 +45,7 @@ https://lotus-gamehub.web.app
 **Routing** - React Router </br>
 **Animation** - Framer Motion </br>
 **Authentication** - Firebase Auth </br>
-**Notificatons** - React Toastify </br>
+**Notifications** - React Toastify </br>
 **Deployment** - Firebase Hosting
 
 
