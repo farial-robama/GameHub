@@ -19,6 +19,7 @@ const Games = () => {
     if (sort === "low") {
       return a.ratings - b.ratings;
     }
+    return 0;
   });
 
   const noGames = sortedGames.length === 0;
@@ -82,7 +83,7 @@ const Games = () => {
       {/* gamecards */}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {noGames ? (
+        {!noGames ? (
           sortedGames.map((game, i) => (
             <motion.div
               key={game.id}
