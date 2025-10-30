@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-https://lotus-gamehub.web.app
+ https://lotus-gamehub.web.app
 
 ## Features
 
