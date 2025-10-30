@@ -1,6 +1,9 @@
 import React from "react";
+import useTitle from "../../Hooks/useTitle";
 
 const About = () => {
+  useTitle("About");
+  
   return (
     <div className="bg-linear-to-br from-[#82cab7] to-[#E7F2EF] flex flex-col-reverse md:flex-row items-center gap-3.5 justify-between rounded-4xl p-10">
       <div className="">

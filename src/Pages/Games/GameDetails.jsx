@@ -1,7 +1,10 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import useTitle from "../../Hooks/useTitle";
 
 const GameDetails = () => {
+  useTitle("Game Details");
+  
   const games = useLoaderData();
   const { id } = useParams();
 

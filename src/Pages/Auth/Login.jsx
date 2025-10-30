@@ -1,12 +1,16 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router";
-import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import GoogleLogin from "./GoogleLogin";
+import useTitle from "../../Hooks/useTitle";
+import { toast } from "react-toastify";
+import LoadingSpinner from "../../Components/LoadingSpinner";
 
 const Login = () => {
-  const { signIn, googleLogin } = useContext(AuthContext);
+  useTitle("Login");
+  
+  const { signIn, googleLogin, loading } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -22,6 +26,7 @@ const Login = () => {
       toast.success("Logged in successfully!!");
       const from = location.state?.from?.pathname || "/";
       navigate(from, { replace: true });
+
     } catch (err) {
       setError(err.message);
       toast.error("Invalid credentials or user not found!");
@@ -45,8 +50,14 @@ const Login = () => {
   };
 
   return (
+    loading ? (
+      <div> 
+        <LoadingSpinner />
+      </div>
+    ) : (
     <div className="card bg-[#bacbb7] w-full max-w-sm shrink-0 shadow-2xl my-9">
       <div className="card-body">
+  
         <form onSubmit={handleSubmit}>
           <fieldset className="fieldset">
             {/* Email */}
@@ -109,7 +120,7 @@ const Login = () => {
         </form>
       </div>
     </div>
-  );
+  ));
 };
 
 export default Login;

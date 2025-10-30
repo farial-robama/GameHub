@@ -23,20 +23,40 @@ const AuthProvider = ({ children }) => {
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  const signIn = (email, password) => {
-    setLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
-  };
-  const googleLogin = () => {
-    return signInWithPopup(auth, googleProvider)
+
+  const signIn = async (email, password) => {
+  setLoading(true);
+  try {
+    const res = await signInWithEmailAndPassword(auth, email, password);
+    return res;
+  } finally {
+    setLoading(false);
   }
+};
+
+ const googleLogin = async () => {
+  setLoading(true);
+  try {
+    const res = await signInWithPopup(auth, googleProvider);
+    return res;
+  } finally {
+    setLoading(false);
+  }
+};
+
   const updateUser = (updateData) => {
     return updateProfile(auth.currentUser, updateData);
   };
-  const logOut = () => {
-    setLoading(true);
-    return signOut(auth);
-  };
+
+  const logOut = async () => {
+  setLoading(true);
+  try {
+    await signOut(auth);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -60,9 +80,9 @@ const AuthProvider = ({ children }) => {
     updateUser,
   };
 
-  if (loading) {
-    return <LoadingSpinner></LoadingSpinner>
-  }
+  // if (loading) {
+  //   return <LoadingSpinner></LoadingSpinner>
+  // }
   return (
     <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
   );

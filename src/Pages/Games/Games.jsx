@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import GameCard from "../../Components/GameCard";
 import { useLoaderData } from "react-router";
+import useTitle from "../../Hooks/useTitle";
 
 const Games = () => {
+  useTitle("All Games");
+  
   const games = useLoaderData();
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("default");

@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { auth } from "../../Firebase/firebase.config";
+import useTitle from "../../Hooks/useTitle";
 
 const ForgetPassword = () => {
+  useTitle("Forget Password");
+  
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const location = useLocation();

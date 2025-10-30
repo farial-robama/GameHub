@@ -1,7 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import useTitle from "../Hooks/useTitle";
 
 const NotFound = () => {
+  useTitle("Not Found")
   const navigate = useNavigate();
   return (
     <div className="text-center flex flex-col items-center p-20">

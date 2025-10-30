@@ -4,8 +4,11 @@ import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import GoogleLogin from "./GoogleLogin";
+import useTitle from "../../Hooks/useTitle";
 
 const Register = () => {
+  useTitle("Register");
+  
   const { createUser, updateUser, googleLogin } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
